@@ -1,5 +1,4 @@
 #!/usr/bin/python3
 
-import string
-
-print('{}'.format({string.ascii_lowercase}), end="")
+for i in range(97, 123):
+    print('{}'.format(chr(i)), end="")
