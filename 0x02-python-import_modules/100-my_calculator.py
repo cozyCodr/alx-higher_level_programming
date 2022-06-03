@@ -11,7 +11,7 @@ def main():
 
     a = int(args[1])
     b = int(args[3])
-    op = chr(args[2])
+    op = str(args[2])
 
     if (op == '+') or (op == '-') or (op == '*') or (op == '/'):
         if op == '+':
