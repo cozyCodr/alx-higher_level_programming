@@ -8,7 +8,7 @@ def main():
     if length != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         return (1)
-    
+
     a = int(args[1])
     b = int(args[3])
     op = chr(args[2])
