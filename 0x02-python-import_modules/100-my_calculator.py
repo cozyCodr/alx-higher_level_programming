@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, mul, div
 from sys import argv as args
+from calculator_1 import add, sub, mul, div
 
 
 def main():
@@ -11,7 +11,7 @@ def main():
     
     a = int(args[1])
     b = int(args[3])
-    op = args[2]
+    op = chr(args[2])
 
     if (op == '+') or (op == '-') or (op == '*') or (op == '/'):
         if op == '+':
