@@ -9,5 +9,5 @@ def no_c(my_string):
     for i in new_string:
         index = new_string.index(i)
         if i == 'c' or i == 'C':
-            new_string.pop(i)
+            new_string.pop(index)
     return "".join(new_string)
