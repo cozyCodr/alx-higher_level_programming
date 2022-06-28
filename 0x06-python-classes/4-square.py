@@ -27,7 +27,7 @@ class Square:
     @size.setter
     def size(self, value):
         """Setter for private property size"""
-        if value is not int:
+        if not type(value) is int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
