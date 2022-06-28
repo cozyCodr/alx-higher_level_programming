@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-square class defined by size
-"""
+"""square class defined by size"""
 
 
 class Square:
