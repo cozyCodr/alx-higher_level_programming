@@ -4,5 +4,5 @@ magic bytecode
 """
 
 
-def magic_calculations(a,b):
+def magic_calculation(a, b):
     return 98 + a ** b
