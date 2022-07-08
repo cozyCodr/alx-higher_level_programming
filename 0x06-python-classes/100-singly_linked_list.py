@@ -39,10 +39,10 @@ class SinglyLinkedList:
     def print_list(self):
         while True:
             if(self.__head.next_node is None):
-                print("{}".format(self.__head.next_node), end="")
+                print("{}".format(self.__head.data), end="")
                 break
             else:
-                print("{}".format(self.__head.next_node))
+                print("{}".format(self.__head.data))
                 self.__head = self.__head.next_node
         return ""
 
@@ -58,7 +58,7 @@ class SinglyLinkedList:
         else:
             save_head = Node(0)
             save_head = self.__head
-            if self.__head < value:
+            if self.__head.data < value:
                 while self.__head.data <= value:
                     if self.__head.next_node is not None:
                         if self.__head.next_node.data >= value:
