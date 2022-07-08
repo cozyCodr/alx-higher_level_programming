@@ -6,6 +6,7 @@ class Rectangle:
     """defines rectangle class"""
     number_of_instances = 0
     print_symbol = "#"
+
     """instantiates class object"""
     def __init__(self, width=0, height=0):
         Rectangle.number_of_instances += 1
