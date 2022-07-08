@@ -66,11 +66,11 @@ class Rectangle:
             for i in range(self.__width):
                 if i == (self.__width - 1):
                     if x == self.__height - 1:
-                        print(f"{Rectangle.print_symbol}", end="")
+                        print(f"{self.print_symbol}", end="")
                     else:
-                        print(f"{Rectangle.print_symbol}")
+                        print(f"{self.print_symbol}")
                 else:
-                    print(f"{Rectangle.print_symbol}", end="")
+                    print(f"{self.print_symbol}", end="")
         return ""
 
     """prints dimensions required to reproduce rectangle"""
