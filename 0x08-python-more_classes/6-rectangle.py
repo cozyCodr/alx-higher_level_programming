@@ -8,7 +8,7 @@ class Rectangle:
 
     """instantiates class object"""
     def __init__(self, width=0, height=0):
-        self.number_of_instances += 1
+        Rectangle.number_of_instances += 1
         if not type(width) is int:
             raise TypeError("width must be an integer")
         elif width < 0:
@@ -82,5 +82,5 @@ class Rectangle:
 
     """prints message when triangle is deleted"""
     def __del__(self):
-        self.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
