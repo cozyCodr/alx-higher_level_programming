@@ -3,8 +3,10 @@
 
 
 class Rectangle:
-    number_of_instances = 0
     """defines rectangle class"""
+    number_of_instances = 0
+
+    """instantiates class object"""
     def __init__(self, width=0, height=0):
         self.number_of_instances += 1
         if not type(width) is int:
