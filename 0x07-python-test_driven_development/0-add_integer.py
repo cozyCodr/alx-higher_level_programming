@@ -5,6 +5,7 @@ function that adds 2 integers
 
 
 def add_integer(a, b=98):
+    """Returns integer sum of 2 numbers"""
     if not type(a) is int:
         if not type(a) is float:
             raise TypeError('a must be an integer')
