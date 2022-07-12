@@ -1,0 +1,27 @@
+
+importing function:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+testing function with integers:
+    >>> add_integer(10, 11)
+    21
+
+testing function with floats:
+    >>> add_integer(10.5, 11.7)
+    21
+
+test function with undefined value:
+    >>> add_integer(a, 11.7)
+    Traceback (most recent call last):
+    NameError: name 'a' is not defined
+
+test function with string type:
+    >>> add_integer('a', 11.7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test with None Type
+    >>> add_integer(10, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
