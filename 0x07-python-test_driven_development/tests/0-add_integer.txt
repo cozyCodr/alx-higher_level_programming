@@ -2,6 +2,11 @@
 importing function:
     >>> add_integer = __import__('0-add_integer').add_integer
 
+Cannot convert Float NAN:
+    add_integer(10, float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
 testing function with integers:
     >>> add_integer(10, 11)
     21
@@ -38,8 +43,3 @@ Missing One Argument:
     add_integer()
     Traceback (most recent call last):
     TypeError: add_integer() missing 1 required positional argument: 'a'
-
-Cannot convert Float NAN:
-    add_integer(10, float('NaN'))
-    Traceback (most recent call last):
-    ValueError: cannot convert float NaN to integer
