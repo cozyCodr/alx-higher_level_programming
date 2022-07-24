@@ -56,4 +56,3 @@ def matrix_divided(matrix, div):
         new_matrix.append(temp)
 
     return new_matrix
-
