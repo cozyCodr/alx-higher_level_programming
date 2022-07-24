@@ -1,0 +1,51 @@
+importing function:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Missing One argument div:
+    >>> matrix_divided(mylist)
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Missing 2 arguments:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Matrix isn't a list:
+    >>> matrix_divided(0, 0)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix is an empty list:
+    >>> matrix_divided([], 0)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Zero Division:
+    >>> matrix_divided([[2]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+Integer and Float Types only:
+    >>> matrix_divided([['h', 1, 2], [2, 3, 4]], 0)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Pass in a Tuple:
+    >>> matrix_divided(([2, 4, 6], [3, 2, 1]), 4)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Pass in Lists of different Lengths:
+    >>> matrix_divided([[2.2, 0.2], [3, 2, 1]], 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+
+Pass in Lists of ints:
+    >>> matrix_divided([[2, 4, 6], [3, 2, 1]], 4)
+    [[0.5, 1.0, 1.5], [0.75, 0.5, 0.25]]
+
+Pass in Lists of Floats
+    >>> matrix_divided([[2.2, 0.2, 0], [3, 2, 1]], 3)
+    [[0.73, 0.07, 0.0], [1.0, 0.67, 0.33]]
