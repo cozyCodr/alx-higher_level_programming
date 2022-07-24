@@ -5,18 +5,21 @@
 def matrix_divided(matrix, div):
     """divides all elements of matrix"""
 
+    # Long Error messages
+    type_msg = "matrix must be a matrix (list of lists) of integers/floats"
+
     # Matrix should always be a list
     if not type(matrix) is list:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(type_msg)
 
     # Matrix should have length of at least 1
     if len(matrix) < 1:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(type_msg)
 
     # Check if matrix contains lists only
     for inner in matrix:
         if not type(inner) is list:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(type_msg)
 
     # Check if list are of the same length
     list_len = len(matrix[0])
@@ -27,9 +30,12 @@ def matrix_divided(matrix, div):
     # Check if all elements are of type
     for inner in matrix:
         for element in inner:
-            if not type(element) is float:
-                if not type(element) is int:
-                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            if type(element) is float:
+                pass
+            elif type(element) is int:
+                pass
+            else:
+                raise TypeError(type_msg)
 
     # Make sure div is a number
     if not type(div) is float:
@@ -51,14 +57,3 @@ def matrix_divided(matrix, div):
 
     return new_matrix
 
-
-def main():
-    mylist = [[2, 4, 6], [3, 2, 1]]
-
-    new_list = matrix_divided([[2.2, 0.2], [3, 2, 1]], 3)
-
-    print(new_list)
-
-
-if __name__ == "__main__":
-    main()
