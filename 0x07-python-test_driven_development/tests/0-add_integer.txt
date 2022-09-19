@@ -1,0 +1,45 @@
+
+importing function:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Cannot convert Float NAN:
+    >>> add_integer(10, float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+testing function with integers:
+    >>> add_integer(10, 11)
+    21
+
+testing function with floats:
+    >>> add_integer(10.5, 11.7)
+    21
+
+test function with undefined value:
+    >>> add_integer(a, 11.7)
+    Traceback (most recent call last):
+    NameError: name 'a' is not defined
+
+test function with string type:
+    >>> add_integer('a', 11.7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+test with None Type
+    >>> add_integer(10, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+test with one missing argument:
+    >>> add_integer(10)
+    108
+
+test for float overflow:
+    >>> add_integer(10, float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+Missing One Argument:
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
