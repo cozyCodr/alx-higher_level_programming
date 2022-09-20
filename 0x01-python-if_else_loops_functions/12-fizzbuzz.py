@@ -9,7 +9,7 @@ def fizzbuzz():
         elif i % 3 == 0:
             fizzbuzz += " Fizz"
         elif i % 5 == 0:
-            fizzbuzz += "Buzz"
+            fizzbuzz += " Buzz"
         else:
             if i == 1:
                 fizzbuzz += str(i)
