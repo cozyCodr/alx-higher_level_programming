@@ -11,5 +11,8 @@ def fizzbuzz():
         elif i % 5 == 0:
             fizzbuzz += "Buzz"
         else:
-            fizzbuzz = fizzbuzz + " " + str(i)
+            if i == 1:
+                fizzbuzz += str(i)
+            else:
+                fizzbuzz = fizzbuzz + " " + str(i)
     print(fizzbuzz)
