@@ -7,7 +7,7 @@ def main():
     length = len(args) - 1
     if length != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        return (1)
+        exit (1)
 
     a = int(args[1])
     b = int(args[3])
@@ -28,7 +28,7 @@ def main():
 
     else:
         print("Unknown operator. Available operators: +, -, * and /")
-        return (1)
+        exit (1)
 
 
 if __name__ == '__main__':
